@@ -1,4 +1,45 @@
-body
-{
-    background: black;
+
+body{
+	background-color: #f4f4f4;
+	color: #555;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.6em;
+	margin: 0;
 }
+a{
+    color:#ff5400;
+}
+
+a:hover {
+    opacity: 0.8;
+    color:#ff5400;
+    text-decoration:none;
+}
+.login .authTitle {
+    text-align: center;
+    line-height: 300%;
+}
+
+.login .kpx_socialButtons a {
+    color: white; // In yourUse @body-bg
+	opacity:0.9;
+}
+.login .kpx_socialButtons a:hover {
+    color: white;
+	opacity:1;
+}
+
+.login .socialButtons .btn-facebook {background: #3b5998; -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+       -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;}
+.login .socialButtons .btn-facebook:hover {background: #172d5e}
+.login .socialButtons .btn-facebook:focus {background: #fff; color:#3b5998; border-color: #3b5998;}
+
+.login .socialButtons .btn-google {background: #00aced; -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+       -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;}
+.login .socialButtons .btn-google:hover {background: #043d52}
+.login .socialButtons .btn-google:focus {background: #fff; color:#00aced; border-color: #00aced;}

@@ -1,1 +1,82 @@
-<h2>login</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/16769d5a1f.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="login">
+        <h3 class="authTitle">Login or <a href="#">Sign up</a></h3>
+        <div class="row row-sm-offset-3 kpx_socialButtons">
+          <div class="col-xs-2 col-sm-2">
+            <a href="#" class="btn btn-lg btn-block btn-Google" data-toggle="tooltip" data-placement="top" title="Google">
+              <i class="fa fa-google fa-2x"></i>
+              <span class="hidden-xs"></span>
+            </a>
+          </div>
+          <div class="col-xs-2 col-sm-2">
+            <a href="#" class="btn btn-lg btn-block btn-Facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+              <i class="fa fa-facebook fa-2x"></i>
+              <span class="hidden-xs"></span>
+            </a>
+          </div>
+    </div><br>
+
+    	<div class="row row-sm-offset-3 loginOr">
+			<div class="col-xs-12 col-sm-6">
+				<hr class="hrOr">
+				<span class="spanOr">or</span>
+			</div>
+		</div>
+
+		<div class="row row-sm-offset-3">
+			<div class="col-xs-12 col-sm-6">
+			    <form class="loginForm" action="" autocomplete="off" method="POST">
+					<div class="input-group">
+						<span class="input-group-addon"><span class="fa fa-user"></span></span>
+						<input type="text" class="form-control" name="username" placeholder="Username">
+					</div>
+
+
+					<div class="input-group">
+						<span class="input-group-addon"><span class="fa fa-key"></span></span>
+						<input  type="password" class="form-control" name="password" placeholder="Password">
+					</div>
+                    {{!-- <span class="tag tag-danger">Password Error!</span> | <span class="tag tag-success">Login success!</span> | <span class="tag tag-warning">Some of password must not be empty!</span> --}}
+
+					<button class="btn btn-lg btn-outline-primary btn-block" type="submit"><i class="fa fa-sign-in"></i> Login</button>
+				</form>
+			</div>
+    	</div>
+		<div class="row kpx_row-sm-offset-3">
+			<div class="col-xs-12 col-sm-3">
+            <p></p>
+				<label class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" value="remember-me">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Remember me!</span>
+                        </label>
+                        </p>
+
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<p class="forgotPwd">
+					<a href="#">Forgot password?</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+        <script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>

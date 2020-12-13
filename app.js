@@ -8,6 +8,9 @@ const passport = require('passport')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser');
+
+
 
 
 // load config
@@ -15,6 +18,7 @@ dotenv.config({path: "./config/config.env"})
 require('./config/passport')(passport)
 connectDB()
 const app = express()
+app.use(bodyParser.urlencoded({ extended: true }));
 //handlebars
 app.engine(".hbs",exphbs({defaultlayout:"main",extname:".hbs"}))
 app.set("view engine",".hbs")
@@ -36,6 +40,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use("/",require("./routes/index"))
 app.use('/auth', require('./routes/auth'))
+app.use('/admin', require('./routes/admin'))
 const PORT= process.env.PORT || 4000
 
 

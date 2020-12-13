@@ -32,19 +32,19 @@ router.get("/dashboard",ensureAuth,async (req,res) =>
             name: req.user.firstName,pic:req.user.image
             
             })
-            console.log(req.user.googleId)
+            
         }catch(err)
         {
             console.error(err)
         }
     }
-    console.log(req.body.fname)
+    
 })
 router.get("/find",ensureAuth,async (req,res) =>
 {
     const hospitals = await Hospitals.find().lean()
-    res.render("dashboard",{name: req.user.firstName,
-    hospitals})
+    res.render("dashboardre",{name: req.user.firstName,
+    hospitals,pic:req.user.image})
 })
 router.post("/add",ensureAuth,async (req,res) =>
 {
